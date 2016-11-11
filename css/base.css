@@ -62,16 +62,35 @@ html {
     .map-wrapper .map-marker * {
       display: table-cell;
       vertical-align: middle; }
+  @media (max-width: 636px) {
+    .map-wrapper {
+      bottom: auto;
+      height: 30vh;
+      z-index: 2;
+      box-shadow: 0px 0px 3px #6D6F71; } }
 
 .list-wrapper {
   position: relative;
   top: 0;
-  left: 5em;
-  width: 400px;
+  left: 5%;
+  width: 25%;
+  min-width: 250px;
+  max-width: 400px;
   min-height: 800vh;
   background-color: #fff;
   box-shadow: 0px 0px 10px #6D6F71;
   padding: 20px; }
+  @media (max-width: 767px) {
+    .list-wrapper {
+      left: 3%; } }
+  @media (max-width: 636px) {
+    .list-wrapper {
+      top: 30%;
+      left: auto;
+      width: auto;
+      min-width: initial;
+      max-width: inherit;
+      box-shadow: none; } }
 
 .list-item {
   padding: 15px 0;

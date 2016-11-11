@@ -35,6 +35,27 @@
 
 (function(){
 	var data = bbqMap.locations;
+	var util = {
+		isSmall : function(){
+			return $(window).width() <= 636;
+		},
+		itemFullyInViewport: function(array){
+			var self = this;
+			var heightOffset = self.isSmall() ? $('#map').height() : 0;
+			var $item;
+
+			$.each(array, function(i, el){
+				var $h2 = $(el).find('h2');
+
+				if ($h2.offset().top + $h2.height() - (window.scrollY + heightOffset) > 0){
+					$item = $(el);
+					return false;
+				}
+			});
+
+			return $item;
+		}
+	}
 	var map = {
 		unit: null,
 		opts: {
@@ -67,7 +88,7 @@
 			var self = this;
 			var map = self.unit;
 
-			var offsetX = $('.list-wrapper').offset().left + $('.list-wrapper').width();
+			var offsetX = util.isSmall() ? 0 : $('.list-wrapper').offset().left + $('.list-wrapper').width();
 
 			map.flyTo({
 				center: ll,
@@ -121,11 +142,9 @@
 			// listen to scroll,
 			// when element is in view, highlight same map marker
 			$(window).scroll( $.debounce( 500, function(event){
-				var $firstItem = $(".list-item:in-viewport").eq(0);
-				var $firstHed = $firstItem.find('h2');
-				// only highlight marker and pan map
-				// if the headline for the item is in view
-				var $selectItem =  ($firstHed.offset().top + $firstHed.height()) - window.scrollY < 0 ? $(".list-item:in-viewport").eq(1) : $firstItem;
+				var $selectItem = util.itemFullyInViewport($(".list-item:in-viewport"));
+
+				console.info($selectItem);
 
 				var c = $selectItem.attr('data-city'),
 					y = $selectItem.attr('data-year'),
@@ -140,8 +159,10 @@
 		scrollToItem: function(c, y, i){
 			var $el = $('.list-item[data-city="' + c + '"][data-year="' + y + '"][data-index="' + i + '"]');
 
+			var heightOffset = util.isSmall() ? $('#map').height() : 0;
+
 			$('html, body').animate({
-				scrollTop: $el.offset().top + 1
+				scrollTop: $el.offset().top + 1 - heightOffset
 			}, 400);	
 		}
 	}

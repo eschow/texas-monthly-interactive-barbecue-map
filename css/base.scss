@@ -9,6 +9,12 @@ $light-gray: #e3e3e1;
 $hyperlink: #d41;
 $hyperlinkHover: #ef6132;
 
+$xl: 1200px;
+$l: 979px;
+$m: 767px;
+$sm: 636px;
+$xs: 480px;
+
 html {
   box-sizing: border-box;
 }
@@ -51,17 +57,39 @@ html {
 			vertical-align: middle;
 		}
 	}
+
+	@media (max-width: $sm){
+		bottom: auto;
+		height: 30vh;
+		z-index: 2;
+    	box-shadow: 0px 0px 3px $dark-gray;
+	}
 }
 
 .list-wrapper {
 	position: relative;
 	top: 0;
-	left: 5em;
-	width: 400px;
+	left: 5%;
+	width: 25%;
+	min-width: 250px;
+	max-width: 400px;
 	min-height: 800vh;
 	background-color: $white;
 	box-shadow: 0px 0px 10px $dark-gray;
 	padding: 20px;
+
+	@media (max-width: $m){
+		left: 3%;
+	}
+
+	@media (max-width: $sm){
+	    top: 30%;
+	    left: auto;
+	    width: auto;
+	    min-width: initial;
+	    max-width: inherit;
+	    box-shadow: none;		
+	}
 }
 
 .list-item {
