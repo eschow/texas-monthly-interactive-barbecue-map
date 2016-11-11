@@ -1,0 +1,11 @@
+{% for item in data %}
+<div data-index="{{ loop.index }}" data-city="{{ item.city }}" data-year="{{ item.yeardocumented }}" data-lng="{{ item.longitude }}" data-lat="{{ item.latitude }}" class="list-item">
+    <p class="list-kicker">{% if item.smokehouse %}Smokehouse{% elif item.bbqpitoven %}BBQ pit{% endif %}</p>
+    <h2>{{ loop.index }}. {{ item.city }}, {{ item.yeardocumented }}</h2>
+    <p class="list-location">{{ item.description }}</p>
+    <p class="list-details">{{ item.description }}</p>
+    <div class="list-share-tools">
+        
+    </div>
+</div>
+{% endfor %}

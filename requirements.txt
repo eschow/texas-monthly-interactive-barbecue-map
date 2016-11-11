@@ -1,0 +1,3 @@
+datadoc==0.1.1
+gdata==2.0.18
+Jinja2==2.7.3

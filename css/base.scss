@@ -1,0 +1,98 @@
+@import "meyer-reset";
+
+$black: #111;
+$red: #DC4621;
+$white: #fff;
+$dark-gray: #6D6F71;
+$light-gray: #e3e3e1;
+
+$hyperlink: #d41;
+$hyperlinkHover: #ef6132;
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.map-wrapper {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: $light-gray;
+
+	$diameter: 30px;
+	.map-marker {
+		width: $diameter;
+		height: $diameter;
+		border-radius: 50%;
+		background-color: $black;
+		opacity: 0.75;
+		color: $white;
+		display: table;
+		text-align: center;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 0.8;
+		}
+
+		&.marker-active,
+		&.marker-active:hover {
+			opacity: 1;
+			background-color: $red;
+			z-index: 2;
+		}
+		* {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+}
+
+.list-wrapper {
+	position: relative;
+	top: 0;
+	left: 5em;
+	width: 400px;
+	min-height: 800vh;
+	background-color: $white;
+	box-shadow: 0px 0px 10px $dark-gray;
+	padding: 20px;
+}
+
+.list-item {
+	padding: 15px 0;
+	border-bottom: 1px solid $light-gray;
+	color: $black;
+
+	h2 {
+		font-size: 2em;
+		margin: .2em 0;
+	}
+
+	p {
+		margin-bottom: .3em;
+	}
+
+	.list-kicker {
+		color: $red;
+		text-transform: uppercase;
+	}
+
+	.list-location {
+		color: $dark-gray;
+		font-style: italic;
+	}
+
+	.list-details {
+
+	}
+
+	.list-share-tools {
+
+	}
+}

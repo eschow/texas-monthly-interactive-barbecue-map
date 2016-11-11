@@ -1,0 +1,92 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.map-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #e3e3e1; }
+  .map-wrapper .map-marker {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #111;
+    opacity: 0.75;
+    color: #fff;
+    display: table;
+    text-align: center;
+    cursor: pointer; }
+    .map-wrapper .map-marker:hover {
+      opacity: 0.8; }
+    .map-wrapper .map-marker.marker-active, .map-wrapper .map-marker.marker-active:hover {
+      opacity: 1;
+      background-color: #DC4621;
+      z-index: 2; }
+    .map-wrapper .map-marker * {
+      display: table-cell;
+      vertical-align: middle; }
+
+.list-wrapper {
+  position: relative;
+  top: 0;
+  left: 5em;
+  width: 400px;
+  min-height: 800vh;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px #6D6F71;
+  padding: 20px; }
+
+.list-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #e3e3e1;
+  color: #111; }
+  .list-item h2 {
+    font-size: 2em;
+    margin: .2em 0; }
+  .list-item p {
+    margin-bottom: .3em; }
+  .list-item .list-kicker {
+    color: #DC4621;
+    text-transform: uppercase; }
+  .list-item .list-location {
+    color: #6D6F71;
+    font-style: italic; }
+
+/*# sourceMappingURL=base.css.map */
