@@ -148,4 +148,9 @@
 
 	map.init();
 	list.init();
+
+	// highlight first item
+	var $first = $('.map-marker[data-index="1"]'),
+		ll = [$first.attr('data-lng'), $first.attr('data-lat')];
+	map.highlightMarker($first, ll);
 })();
