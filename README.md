@@ -27,3 +27,9 @@ The steps above will auto-generate both `js/locations.js` and also `index.html` 
 	cd ~/navigate/to/your/project/directory/texas-monthly-interactive-barbecue-map
 
 	python -m SimpleHTTPServer 8000
+
+The `base.css` is compiled using SASS. You're welcome to edit `base.css` directly if you want to, or you [can set yourself up](http://sass-lang.com/install) to edit the `base.scss`. I installed SASS using the command-line approach. When developing the project, you can run
+
+	sass --watch css
+
+in the project directory to run the compiler that outputs the css.
