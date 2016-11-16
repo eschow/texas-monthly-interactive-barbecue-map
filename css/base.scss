@@ -1,19 +1,6 @@
 @import "meyer-reset";
-
-$black: #111;
-$red: #DC4621;
-$white: #fff;
-$dark-gray: #6D6F71;
-$light-gray: #e3e3e1;
-
-$hyperlink: #d41;
-$hyperlinkHover: #ef6132;
-
-$xl: 1200px;
-$l: 979px;
-$m: 767px;
-$sm: 636px;
-$xs: 480px;
+@import "fonts";
+@import "variables";
 
 html {
   box-sizing: border-box;
@@ -21,7 +8,9 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
+body {
+	font-family: $sentinel;
+}
 .map-wrapper {
 	position: fixed;
 	top: 0;
@@ -30,7 +19,7 @@ html {
 	right: 0;
 	background-color: $light-gray;
 
-	$diameter: 30px;
+	$diameter: 35px;
 	.map-marker {
 		width: $diameter;
 		height: $diameter;
@@ -41,6 +30,10 @@ html {
 		display: table;
 		text-align: center;
 		cursor: pointer;
+		font-family: $trumpgothic;
+		font-size: 1.4em;
+		line-height: 0.7em;
+		letter-spacing: 0.05em;
 
 		&:hover {
 			opacity: 0.8;
@@ -98,17 +91,23 @@ html {
 	color: $black;
 
 	h2 {
-		font-size: 2em;
-		margin: .2em 0;
+		font-size: 2.3em;
+		font-family: $trumpgothic;
+		margin: .4em 0;
 	}
 
 	p {
-		margin-bottom: .3em;
+		margin-bottom: 0.6em;
+		font-family: $sentinel;
+		font-size: 0.8em;
+		line-height: 1.4em;
 	}
 
 	.list-kicker {
 		color: $red;
 		text-transform: uppercase;
+		font-family: $verlag7r;
+		letter-spacing: 0.15em;
 	}
 
 	.list-location {
