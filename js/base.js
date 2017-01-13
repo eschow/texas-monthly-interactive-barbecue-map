@@ -35,13 +35,14 @@
 
 (function(){
 	var data = bbqMap.locations;
+	var navOffset = $('nav').length > 0 ? $('nav').height() : 0;
 	var util = {
 		isSmall : function(){
 			return $(window).width() <= 636;
 		},
 		itemFullyInViewport: function(array){
 			var self = this;
-			var heightOffset = self.isSmall() ? $('#map').height() : 0;
+			var heightOffset = self.isSmall() ? $('#map').height() + navOffset : navOffset;
 			var $item;
 
 			$.each(array, function(i, el){
@@ -159,7 +160,7 @@
 		scrollToItem: function(c, y, i){
 			var $el = $('.list-item[data-city="' + c + '"][data-year="' + y + '"][data-index="' + i + '"]');
 
-			var heightOffset = util.isSmall() ? $('#map').height() : 0;
+			var heightOffset = util.isSmall() ? $('#map').height() + navOffset : navOffset;
 
 			$('html, body').animate({
 				scrollTop: $el.offset().top + 1 - heightOffset

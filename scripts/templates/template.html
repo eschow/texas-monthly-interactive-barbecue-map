@@ -1,16 +1,28 @@
 <html>
 <head>
-    <title></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <meta charset="utf-8"/> <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.5, maximum-scale=2.0"/>
+    <title>The headline will go here — TMBBQ</title>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" type="text/css" href="css/base.css">
 </head>
 <body>
 
-	<div class="map-wrapper" id="map"></div>
-	<div class="list-wrapper">
+	<nav>
+		<a href="http://tmbbq.com/"><img src="http://tmbbq.com/wp-content/themes/tmbbq/img/logo.png" alt="TMBBQ"></a>
+	</nav>
 
-{{ locations }}
+	<div class="graphic-container">
+		<div class="map-wrapper" id="map"></div>
+		<div class="list-wrapper">
 
+		<div class="headline-wrapper">
+			<h1>The headline will go here</h1>	
+			<p>Sed posuere consectetur est at lobortis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur.</p>
+		</div>
+
+		{{ locations }}
+
+		</div>
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
