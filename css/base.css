@@ -414,7 +414,7 @@ nav {
       left: 3%; } }
   @media (max-width: 636px) {
     .list-wrapper {
-      top: 30%;
+      padding-top: 35vh;
       left: auto;
       width: auto;
       min-width: initial;
