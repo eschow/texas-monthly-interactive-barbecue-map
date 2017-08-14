@@ -19,7 +19,7 @@ The source of this map is this [Google spreadsheet](https://docs.google.com/spre
 
 The steps above will auto-generate both `js/locations.js` and also `index.html` based on the html snippets in `scripts/templates` and the data in the Google spreadsheet.
 
-**Option #2: **manually. 
+**Option #2:** manually. 
 
 This is detached from the Google spreadsheet entirely. I would recommend keeping the Google spreadsheet up-to-date for archival purposes and then you can:
 
